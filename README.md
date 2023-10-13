@@ -14,8 +14,11 @@ Tools/Techniques
 The following tools and techniques are used:
 
 Data Manipulation: The dplyr R package is used for data wrangling tasks like combining the data from multiple months into a single dataframe, dealing with dates, removing missing values etc.
+
 Time Series Forecasting: Facebook Prophet, a library for time series forecasting is used to fit a model on the daily pickup count timeseries and generate forecasts.
+
 Visualization: The ggplot2 and ggthemes libraries provide capabilities for flexible graphs and styled themes for visualizing the data.
+
 Reporting: Forecast outputs are exported to Excel using the writexl package for generating reports.
 
 Methodology
@@ -23,9 +26,13 @@ Methodology
 The overall steps followed are:
 
 Data Cleaning: Raw pickup data from individual months is combined and cleaned. Dates are converted to datetime format and missing values are removed.
+
 Feature Engineering: The dataset is aggregated by day and the number of daily pickups is counted. This serves as the timeseries for modeling.
+
 Time Series Modeling: A Prophet model is fitted on the daily pickup count timeseries. The model automatically accounts for trends, seasonality and holidays.
+
 Prediction: The fitted model is used to forecast pickup demand for the next 30 days.
+
 Reporting: The 30 day forecast output is exported to an Excel file for easy reporting.
 
 Results
